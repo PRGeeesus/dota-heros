@@ -2,14 +2,18 @@ const div = document.querySelector("#app");
 var imageDIV = document.getElementById("imageDIV");
 const base_url = "http://cdn.dota2.com"
 
-var g_g_herodata;
+var g_herodata;
 var g_keys;
 var g_randomlist = []
 var g_targets = []
 
+game_Running = 0;
+
 fetch("heroes.json")
   .then(response => response.json())
-  .then(json => display(json));
+  .then(json => {
+    g_herodata = json
+  });
 
 
 const chooseRandom = (arr, num = 1) => {
@@ -26,8 +30,13 @@ const chooseRandom = (arr, num = 1) => {
 };
 
 
-function display(herodata){
-    g_herodata = herodata;
+function display(){
+    if(game_Running == 0){
+      game_Running = 1
+    }
+    else{
+      return;
+    }
     var g_keys = Object.keys(g_herodata);
     var size = 6;
     g_randomlist = chooseRandom(g_keys, size*size)
