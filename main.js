@@ -40,6 +40,7 @@ function display(herodata){
         hero_img = document.createElement("img");
         hero_img.src = base_url + g_herodata[key].icon
         hero_img.id = key + "target"
+        hero_img.classList.add("targets");
         target_area.appendChild(hero_img)
       })
 
@@ -73,7 +74,7 @@ function check(id)
   g_targets.forEach(key=>{
     if (id == key){
       tempdiv = document.getElementById(id);
-      tempdiv.style = " border-width:2px; border-style:solid;"
+      tempdiv.style = " border:3px solid black"
       tempdiv.value = "found";
     }
   })

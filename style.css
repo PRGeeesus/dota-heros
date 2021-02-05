@@ -1,3 +1,9 @@
+
+.heroicon{
+	padding: 5px;
+	border: 2px solid gray;
+}
+
 body {
 	margin:0;
 	padding:0;
@@ -5,17 +11,20 @@ body {
 	color:#939393;
 }
 
-.heroicon{
-	padding: 5px;
-}
-
 .btn1{
 	display: inline-grid;
-	width: 500px;
-	height: 80px;
 }
+.targets{
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+
 header{
+	margin-top: 1%;
+	margin-bottom: 2%;
 	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 .one_square{
 	margin: 20px;
@@ -23,4 +32,5 @@ header{
 
 .data1{
 	text-align: center;
+	line-height: 0;
 }
