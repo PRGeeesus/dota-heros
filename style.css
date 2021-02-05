@@ -5,16 +5,22 @@ body {
 	color:#939393;
 }
 
-img{
-	padding:100;
+.heroicon{
+	padding: 5px;
 }
 
 .btn1{
 	display: inline-grid;
 	width: 500px;
-	height: 80 px;
+	height: 80px;
 }
-
+header{
+	text-align: center;
+}
 .one_square{
 	margin: 20px;
+}
+
+.data1{
+	text-align: center;
 }

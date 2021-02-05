@@ -45,14 +45,15 @@ function display(herodata){
 
     var counterr = 0;
     grid = document.createElement("div");
+    grid.classList.add("center");  
     range(0,size).forEach(rows=>{
       row = document.createElement("div");
       range(0,size).forEach(collums=>{
         //hero_img = document.createElement("img");
-        console.log(((rows*size)+collums))
         var id = g_randomlist[((rows*size)+collums)]
         hero_img = document.createElement("input");
         hero_img.type = "image"
+        hero_img.classList.add("heroicon");
         hero_img.src = base_url + g_herodata[id].icon
         hero_img.id = id
         hero_img.value = "x";
